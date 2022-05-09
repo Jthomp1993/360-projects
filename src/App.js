@@ -1,7 +1,6 @@
-import styled from 'styled-components/macro';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './styles';
-import { Navbar } from './components';
+import { Navbar, SideNav } from './components';
 import { Home, About, Services, Contact } from './pages';
 
 function App() {
@@ -10,6 +9,7 @@ function App() {
         <Router>
         <GlobalStyle />
         <Navbar />
+        <SideNav />
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/about' element={<About />}></Route>
