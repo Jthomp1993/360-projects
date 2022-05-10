@@ -83,6 +83,15 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .btn {
+        border: 1px solid #fff;
+        padding: 10px;
+    }
+
+    .btn:hover {
+        background-color: #353535;
+    }
+
 
 
 `;

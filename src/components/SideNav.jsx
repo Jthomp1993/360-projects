@@ -37,7 +37,7 @@ const StyledHeader = styled.header`
     left: 0;
 
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 400;
         color: #fff;
     }
