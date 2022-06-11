@@ -1,59 +1,47 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
-const StyledHomeHeader = styled.section`
+const StyledHeaderWrapper = styled.section`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    height: 60%;
+    margin-bottom: 3rem;
 
 `
 
 const StyledHeaderContent = styled.div`
-    width: 85%;
+    width: 95%;
+    margin: auto;
     padding: 20px;
-    text-align: center;
     color: #fff;
 
     h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        margin-bottom: 3rem;
-    }
-
-    p {
-        font-size: clamp(1rem ,3vw, 1.2rem);
+        font-size: clamp(2.5rem, 5vw, 3.7rem);
+        margin-top: 7.5rem;
         font-weight: 400;
-        margin-bottom: 2rem;
+        width: 75%;
+        line-height: 1.25;
     }
 
-    @media (max-width: 820) {
-        width: 100%;
-    }
-
-    @media (max-width: 520px) {
-        width: 100%;
+    @media (max-width: 820px) {
         h1 {
-            font-size: 2rem;
+            width: 100%;
         }
     }
+
+    
 `
 
 const HomeHeader = () => {
 
     return (
-        <StyledHomeHeader>
+        <StyledHeaderWrapper>
             <StyledHeaderContent>
                 <h1>
                     London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience.
                 </h1>
-                <p>Please feel free to get in touch.</p>
-                <Link className='btn' to='/contact' style={{ textDecoration: 'none', color: '#fff' }}>
-                    CONTACT US
-                </Link>
 
             </StyledHeaderContent>
-        </StyledHomeHeader>
+        </StyledHeaderWrapper>
     )
 }
 

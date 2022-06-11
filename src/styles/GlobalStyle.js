@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         max-width: 100%;
         min-height: 100%;
-        background-color: #272725;
+        background-color: #0E0E0E;
 
     }
 
@@ -25,9 +25,12 @@ const GlobalStyle = createGlobalStyle`
         height: 100px;
         padding-left: 30px;
         padding-right: 30px;
+        background-color: #0E0E0E;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+        position: sticky;
+        top: 0px;
     }
 
     .logo h2 {
@@ -48,10 +51,15 @@ const GlobalStyle = createGlobalStyle`
         padding-right: 1rem;
     }
 
+    .active {
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 5px;
+    }
+
     .burgerIcon {
         font-size: 1.5rem;
         color: #fff;
-        background: #272725;
+        background: #0E0E0E;
         border: none;
         cursor: pointer;
         
@@ -59,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
 
     .sideNavWrapper {
         position: fixed;
-        background-color: #272725;
+        background-color: #0E0E0E;
         width: 100vw;
         height: 100vh;
         right: 0;
@@ -83,13 +91,27 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    .btn {
-        border: 1px solid #fff;
-        padding: 10px;
+    .btn__pill {
+        color: #000;
+        background-color: #FFF;
+        border-radius: 50px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .btn__pill:hover {
+        background-color: #C9C9C9;
     }
 
     .btn:hover {
         background-color: #353535;
+    }
+
+    .banner__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
 
