@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
         position: sticky;
         top: 0px;
+        z-index: 999999999999999;
     }
 
     .logo h2 {

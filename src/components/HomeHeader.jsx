@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 const StyledHeaderWrapper = styled.section`
     display: flex;
@@ -36,10 +37,14 @@ const HomeHeader = () => {
     return (
         <StyledHeaderWrapper>
             <StyledHeaderContent>
-                <h1>
-                    London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience.
-                </h1>
-
+                <motion.div 
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1, x: [0, 100, 0] }}
+                    transition={{ duration: 1}}>
+                    <h1>
+                        London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience.
+                    </h1>
+                </motion.div>
             </StyledHeaderContent>
         </StyledHeaderWrapper>
     )
