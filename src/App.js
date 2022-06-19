@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './styles';
-import { Navbar, SideNav } from './components';
+import { Navbar, SideNav, Footer } from './components';
 import { Home, About, Services, Contact } from './pages';
 import { MainProvider } from './context/MainContext';
 
@@ -18,6 +18,7 @@ function App() {
                 <Route path='/services' element={<Services />}></Route>
                 <Route path='/contact' element={<Contact />}></Route>
             </Routes>
+        <Footer />
         </Router>
         </MainProvider>
     </>

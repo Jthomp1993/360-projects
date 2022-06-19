@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components/macro";
 const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+        overflow-x: clip;
     }
     *,
     *:before,
@@ -15,7 +16,9 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         max-width: 100%;
         min-height: 100%;
-        background-color: #0E0E0E;
+        background-color: #000;
+        overflow-x: clip;
+        position: relative;
 
     }
 
@@ -25,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100px;
         padding-left: 30px;
         padding-right: 30px;
-        background-color: #0E0E0E;
+        background-color: #000;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -98,6 +101,19 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 50px;
         padding: 20px;
         font-size: 1rem;
+    }
+
+    .btn__primary {
+        color: #000;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 1rem;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .btn__primary:hover {
+        background-color: #C9C9C9;
     }
 
     .btn__pill:hover {

@@ -28,7 +28,7 @@ const Banner = () => {
     return (
         <StyledBannerWrapper>
             <StyledBannerImage className="banner__brand">
-                <img className="banner__image" src={require("../images/banner__brand.jpg")} alt="360" />
+                <img className="banner__image" src={require("../images/banner__image3.jpg")} alt="360" />
             </StyledBannerImage>
             <StyledBannerImage className="banner__brand">
                 <img className="banner__image" src={require("../images/banner__image1.jpg")} alt="360" />
