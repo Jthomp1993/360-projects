@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     .burgerIcon {
         font-size: 1.5rem;
         color: #fff;
-        background: #0E0E0E;
+        background: #000000;
         border: none;
         cursor: pointer;
         
@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
 
     .sideNavWrapper {
         position: fixed;
-        background-color: #0E0E0E;
+        background-color: #000000;
         width: 100vw;
         height: 100vh;
         right: 0;

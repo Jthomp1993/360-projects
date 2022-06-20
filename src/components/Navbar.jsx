@@ -1,12 +1,36 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaStream, FaTimes } from 'react-icons/fa';
+import { motion, useViewportScroll } from 'framer-motion';
 import SideNav from './SideNav';
 import MainContext from '../context/MainContext';
 
 const Navbar = () => {
     const [burgerIsActive, setBurgerIsActive] = useState(false);
+    const [hidden, setHidden] = useState(false);
     const { activeButton, setActiveButton } = useContext(MainContext);
+    const { scrollY } = useViewportScroll();
+
+    useEffect(() => {
+        return scrollY.onChange(() => update());
+    })
+
+    const update = () => {
+        if (scrollY?.current < scrollY?.prev) {
+            setHidden(false);
+            console.log("visible");
+          } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+            setHidden(true);
+            console.log("hidden");
+        }
+    }
+
+    const variants = {
+        /** this is the "visible" key and it's respective style object **/
+        visible: { opacity: 1, y: 0 },
+        /** this is the "hidden" key and it's respective style object **/
+        hidden: { opacity: 0, y: -25 }
+    };
 
     const toggleBurger = () => {
         setBurgerIsActive(!burgerIsActive);
@@ -14,10 +38,13 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navWrapper">
+            <motion.div className="navWrapper"
+            variants={variants}
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
-                    <h2>ThreeSixty</h2>
+                    <h2>360 Designs</h2>
                 </Link>
             </div>
             <div className="navButtons">
@@ -56,7 +83,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </motion.div>
         
 
         <SideNav burgerIsActive={burgerIsActive} closeMenu={(burgerIsActive) => setBurgerIsActive(burgerIsActive)} />
