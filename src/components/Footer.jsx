@@ -14,12 +14,12 @@ const StyledFooterContent = styled.div`
     align-items: center;
     text-align: center;
     color: #ffffff;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 
     h2 {
         font-size: 30px;
-        font-weight: 800;
+        font-weight: 200;
         margin-top: 0px;
     }
 
@@ -46,7 +46,7 @@ const StyledFooterContent = styled.div`
 
     @media screen and (min-width: 1000px) {
         h2 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
         }
     }
 `
@@ -63,7 +63,7 @@ const Footer = () => {
     return (
         <StyledFooterWrapper>
             <StyledFooterContent>
-                <h2>ThreeSixty</h2>
+            <img className="footer__brand" src={require("../images/brand.png")} alt="360" />
                 <button onClick={scrollToTop} className={`btn__primary`} style={{ textDecoration: 'none'}}>Back to top</button>
                     <p>Built by <a href="https://github.com/Jthomp1993" target="_blank" rel="noreferrer" rel="noreferrer"><strong>joshuageorge_coding</strong> <FaGithub /></a></p>
             </StyledFooterContent>

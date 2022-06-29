@@ -18,16 +18,20 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         background-color: #000;
         overflow-x: clip;
-        position: relative;
 
+    }
+
+    .bgScroll {
+        position: fixed;
     }
 
     /* Navbar */
     .navWrapper {
         width: 100%;
         height: 100px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: auto;
         background-color: #000;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -35,12 +39,15 @@ const GlobalStyle = createGlobalStyle`
         position: sticky;
         top: 0px;
         z-index: 999999999999999;
+
+        @media screen and (min-width: 1000px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 
-    .logo h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        color: #ffffff;
+    .nav__brand {
+        width: 175px;
     }
 
     .navButtons {
@@ -52,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
         color: #ffffff;
         font-weight: 400;
         font-size: 1rem;
-        padding-right: 1rem;
+        padding-left: 1rem;
     }
 
     .active {
@@ -80,6 +87,7 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
+        z-index: 9999999999999;
 
     }
 
@@ -131,7 +139,15 @@ const GlobalStyle = createGlobalStyle`
         object-fit: cover;
     }
 
+    .hero__image {
+        width: 100%;
+        
+    }
 
+    .footer__brand {
+        width: 250px;
+        margin-bottom: 2rem;
+    }
 
 `;
 

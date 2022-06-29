@@ -18,10 +18,8 @@ const Navbar = () => {
     const update = () => {
         if (scrollY?.current < scrollY?.prev) {
             setHidden(false);
-            console.log("visible");
           } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
             setHidden(true);
-            console.log("hidden");
         }
     }
 
@@ -36,6 +34,12 @@ const Navbar = () => {
         setBurgerIsActive(!burgerIsActive);
     }
 
+    if(burgerIsActive) {
+        document.body.classList.add('bgScroll');
+    } else {
+        document.body.classList.remove('bgScroll');
+    }
+
     return (
         <>
             <motion.div className="navWrapper"
@@ -44,7 +48,8 @@ const Navbar = () => {
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
-                    <h2>360 Designs</h2>
+                <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
+
                 </Link>
             </div>
             <div className="navButtons">

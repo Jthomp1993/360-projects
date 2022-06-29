@@ -2,7 +2,6 @@ import styled from 'styled-components/macro';
 
 const StyledBannerWrapper = styled.section`
     padding: 0px;
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
@@ -22,6 +21,7 @@ const StyledBannerImage = styled.div`
         display: block;
         padding-top: 100%;
     } 
+
 `
 
 const Banner = () => {
