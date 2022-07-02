@@ -6,7 +6,6 @@ const StyledHeaderWrapper = styled.section`
     flex-direction: row;
     align-items: center;
     margin-bottom: 3rem;
-
 `
 
 const StyledHeaderContent = styled.div`

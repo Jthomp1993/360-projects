@@ -20,7 +20,7 @@ const StyledContactContent = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #E5E5E5;
+    color: #FFF;
     text-align: center;
     margin-top: 10rem;
     margin-bottom: 10rem;

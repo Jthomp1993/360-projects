@@ -3,8 +3,10 @@ import { GlobalStyle } from './styles';
 import { Navbar, SideNav, Footer } from './components';
 import { Home, About, Services, Contact } from './pages';
 import { MainProvider } from './context/MainContext';
+import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
+
   return (
     <>
         <MainProvider>
@@ -12,12 +14,14 @@ function App() {
         <GlobalStyle />
         <Navbar />
         <SideNav />
-            <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/about' element={<About />}></Route>
-                <Route path='/services' element={<Services />}></Route>
-                <Route path='/contact' element={<Contact />}></Route>
-            </Routes>
+            <ScrollToTop>
+                <Routes>
+                    <Route path='/' element={<Home />}></Route>
+                    <Route path='/about' element={<About />}></Route>
+                    <Route path='/services' element={<Services />}></Route>
+                    <Route path='/contact' element={<Contact />}></Route>
+                </Routes>
+            </ScrollToTop>
         <Footer />
         </Router>
         </MainProvider>

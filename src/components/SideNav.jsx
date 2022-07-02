@@ -9,6 +9,7 @@ const StyledMenu = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: red;
 
     h2 {
         font-size: 2rem;
@@ -30,6 +31,7 @@ const StyledHeader = styled.header`
     position: absolute;
     padding-left: 30px;
     padding-right: 30px;
+    height: 120px;
     color: #fff;
     top: 0;
     right: 0;

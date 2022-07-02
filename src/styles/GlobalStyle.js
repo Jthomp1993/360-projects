@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: #000;
         overflow-x: clip;
 
+        @media (max-width: 320px) {
+            word-break: break-all;
+        }
     }
 
     .bgScroll {
@@ -28,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     /* Navbar */
     .navWrapper {
         width: 100%;
-        height: 100px;
+        height: 120px;
         padding-left: 25px;
         padding-right: 25px;
         margin: auto;
@@ -128,10 +131,19 @@ const GlobalStyle = createGlobalStyle`
         background-color: #C9C9C9;
     }
 
-    .btn:hover {
-        background-color: #353535;
+    .btn__dark {
+        color: #FFF;
+        background-color: #000;
+        border-radius: 5px;
+        padding: 1rem;
+        font-size: 1rem;
+        display: inline-block;
     }
 
+    .btn__dark:hover {
+        background-color: #333333;
+    }
+    
     .banner__image {
         position: absolute;
         width: 100%;
@@ -142,6 +154,14 @@ const GlobalStyle = createGlobalStyle`
     .hero__image {
         width: 100%;
         
+    }
+
+    .white {
+        color: #ffffff;
+    }
+
+    .green {
+        color: green;
     }
 
     .footer__brand {

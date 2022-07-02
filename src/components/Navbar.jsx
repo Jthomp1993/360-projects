@@ -47,7 +47,8 @@ const Navbar = () => {
             animate={hidden ? "hidden" : "visible"}
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
             <div className="logo">
-                <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
+                <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
+                onClick={() => setActiveButton('home')} className={activeButton === 'home' ? '' : ''}>
                 <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
 
                 </Link>
@@ -55,25 +56,25 @@ const Navbar = () => {
             <div className="navButtons">
                 <div className="navButtonItem">
                     <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}
-                    onClick={() => setActiveButton('home')} className={activeButton === 'home' ? 'active' : ''}>
+                    className={activeButton === 'home' ? 'active' : ''}>
                         HOME
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }}
-                    onClick={() => setActiveButton('about')} className={activeButton === 'about' ? 'active' : ''}>
+                    className={activeButton === 'about' ? 'active' : ''}>
                         ABOUT
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/services' style={{ textDecoration: 'none', color: '#fff' }}
-                    onClick={() => setActiveButton('services')} className={activeButton === 'services' ? 'active' : ''}>
+                    className={activeButton === 'services' ? 'active' : ''}>
                         SERVICES
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/contact' style={{ textDecoration: 'none', color: '#fff' }}
-                    onClick={() => setActiveButton('contact')} className={activeButton === 'contact' ? 'active' : ''}>
+                    className={activeButton === 'contact' ? 'active' : ''}>
                         CONTACT
                     </Link>
                 </div>
