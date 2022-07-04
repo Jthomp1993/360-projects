@@ -57,25 +57,25 @@ const Navbar = () => {
                 <div className="navButtonItem">
                     <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'home' ? 'active' : ''}>
-                        HOME
+                        Home
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'about' ? 'active' : ''}>
-                        ABOUT
+                        About
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/services' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'services' ? 'active' : ''}>
-                        SERVICES
+                        Services
                     </Link>
                 </div>
                 <div className="navButtonItem">
                     <Link to='/contact' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'contact' ? 'active' : ''}>
-                        CONTACT
+                        Contact
                     </Link>
                 </div>
                 <div className="navBurgerButton">

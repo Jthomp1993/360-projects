@@ -1,5 +1,6 @@
 import { useEffect, useContext } from "react";
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import MainContext from '../context/MainContext';
 
 const Contact = () => {
@@ -10,12 +11,15 @@ const Contact = () => {
         if(location.pathname === '/contact') {
             setActiveButton('contact');
         }
-    }, [location])
+    }, [location, setActiveButton])
 
     return (
-        <div>
+        <motion.div
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        exit={{ opacity: 0}}>
             Contact
-        </div>
+        </motion.div>
     )
 }
 

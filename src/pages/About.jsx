@@ -1,5 +1,7 @@
 import { useEffect, useContext } from 'react';
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import styled from "styled-components";
 import MainContext from '../context/MainContext';
 
@@ -47,7 +49,7 @@ const StyledSectionWrapper = styled.section`
     margin-top: 6rem;
 `
 
-const StyledSectionContent = styled.div`
+const StyledSectionContent = styled(motion.div)`
     text-align: center;
 
     h2 {
@@ -74,28 +76,52 @@ const About = () => {
     const location = useLocation();
     const { activeButton, setActiveButton } = useContext(MainContext);
 
+    const { ref, inView } = useInView();
+    const animation = useAnimation();
+
     useEffect(() => {
         if(location.pathname === '/about') {
             setActiveButton('about');
         }
-    }, [location])
+
+        if(inView) {
+            animation.start({
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 1, bounce: 0.3
+                }
+            })
+        }
+        if(!inView) {
+            animation.start({
+                x: '100vw'
+            })
+        }
+    }, [location, inView, animation, setActiveButton])
+
     return (
-        <>
+        <motion.div
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        exit={{ opacity: 0}}>
         <StyledHeroWrapper>
         <img className="hero__image" src={require("../images/about__hero.jpg")} alt="360" />
+        <div>
         <h2>About us</h2>
         <p>London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eius doloremque excepturi delectus cupiditate! Nobis cumque pariatur, deleniti quisquam neque, officiis alias repellendus, quae cupiditate excepturi aliquam harum rerum ipsum?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur odit ea ex impedit repellendus sequi dicta optio amet voluptas. Totam unde odio itaque explicabo excepturi dolorem incidunt perspiciatis cum!</p>
+        </div>
         </StyledHeroWrapper>
-        <StyledSectionWrapper>
-            <StyledSectionContent>
+        <StyledSectionWrapper ref={ref}>
+            <StyledSectionContent
+            animate={animation}>
             <h2>Let's work together.</h2>
             <Link className={`btn__dark ${activeButton === 'contact' ? 'active' : ''}`} to='/contact' style={{ textDecoration: 'none'}}>Contact Us</Link>
             
             </StyledSectionContent>
         </StyledSectionWrapper>
-        </>
+        </motion.div>
     )
 }
 

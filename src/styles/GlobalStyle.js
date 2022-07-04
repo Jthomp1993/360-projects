@@ -61,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
     .navButtonItem {
         color: #ffffff;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 18px;
         padding-left: 1rem;
     }
 
