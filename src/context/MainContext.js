@@ -10,7 +10,8 @@ export const MainProvider = ( { children } ) => {
     return <MainContext.Provider value={{
         burgerIsActive,
         activeButton,
-        setActiveButton
+        setActiveButton,
+        setBurgerIsActive
     }}>
         { children }
     </MainContext.Provider>

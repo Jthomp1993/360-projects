@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
+import MainContext from '../context/MainContext';
 
 
 const StyledMenu = styled.div`
@@ -9,7 +11,6 @@ const StyledMenu = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: red;
 
     h2 {
         font-size: 2rem;
@@ -46,6 +47,7 @@ const StyledHeader = styled.header`
 `
 
 const SideNav = ({ burgerIsActive }, props) => {
+    const { setBurgerIsActive } = useContext(MainContext);
 
     return (
         <>
@@ -53,7 +55,7 @@ const SideNav = ({ burgerIsActive }, props) => {
                 <aside className="sideNavWrapper">
                     <StyledMenu>
                     <StyledHeader>
-                            <h2>ThreeSixty</h2>
+                        <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
                         <Link to='/' className="closeButton" onClick={() => props.closeMenu(false)}>
                             <FaTimes />
                         </Link>
