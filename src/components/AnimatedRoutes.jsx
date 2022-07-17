@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Home, About, Services, Contact } from '../pages';
+import { Home, About, Services, Gallery, Contact } from '../pages';
 import { AnimatePresence } from 'framer-motion';
 
 function AnimatedRoutes() {
@@ -11,6 +11,7 @@ function AnimatedRoutes() {
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/about' element={<About />}></Route>
                 <Route path='/services' element={<Services />}></Route>
+                <Route path='/gallery' element={<Gallery />}></Route>
                 <Route path='/contact' element={<Contact />}></Route>
             </Routes>
         </AnimatePresence>

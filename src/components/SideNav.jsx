@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 import MainContext from '../context/MainContext';
 
 
@@ -10,7 +11,7 @@ const StyledMenu = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 
     h2 {
         font-size: 2rem;
@@ -47,35 +48,34 @@ const StyledHeader = styled.header`
 `
 
 const SideNav = ({ burgerIsActive }, props) => {
-    const { setBurgerIsActive } = useContext(MainContext);
+    const { setBurgerIsActive, activeButton } = useContext(MainContext);
 
     return (
-        <>
+        <AnimatePresence>
             {burgerIsActive && (
-                <aside className="sideNavWrapper">
+                <motion.aside className="sideNavWrapper"
+                initial={{ x: '100vw' }}
+                animate={{ x: '0' }}
+                transition={{ duration: 0.5 }}
+                exit={{ x: '100vw' }}
+                >
                     <StyledMenu>
-                    <StyledHeader>
-                        <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
-                        <Link to='/' className="closeButton" onClick={() => props.closeMenu(false)}>
-                            <FaTimes />
-                        </Link>
-                    </StyledHeader>
-                        <Link to='/' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
-                            <h2 className="linkItem">HOME</h2>
-                        </Link>
                         <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
-                            <h2>ABOUT</h2>
+                            <h2 className={activeButton === 'about' ? 'active' : ''}>ABOUT</h2>
                         </Link>
                         <Link to='/services' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
-                            <h2>SERVICES</h2>
+                            <h2 className={activeButton === 'services' ? 'active' : ''}>SERVICES</h2>
+                        </Link>
+                        <Link to='/gallery' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
+                            <h2 className={activeButton === 'gallery' ? 'active' : ''}>GALLERY</h2>
                         </Link>
                         <Link to='/contact' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
-                            <h2>CONTACT</h2>
+                            <h2 className={activeButton === 'contact' ? 'active' : ''}>CONTACT</h2>
                         </Link>
                     </StyledMenu>
-                </aside>
+                </motion.aside>
             )}
-        </>
+        </AnimatePresence>
     )
 }
 

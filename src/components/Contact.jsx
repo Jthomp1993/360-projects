@@ -30,6 +30,8 @@ const StyledContactContent = styled(motion.div)`
         font-size: 30px;
         font-weight: 800;
         margin: 0px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
     }
 
     p {
@@ -89,7 +91,7 @@ const Contact = () => {
         <StyledContactWrapper ref={ref}>
             <StyledContactContent
             animate={animation}>
-                    <h2>info@360installs.co.uk</h2>
+                    <h2>INFO@360INSTALLS.CO.UK</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi quod ipsa, autem ducimus mollitia sequi nulla eligendi, quis similique, distinctio adipisci aut culpa iure necessitatibus illo voluptas at sapiente. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium assumenda tempora eius tenetur, error quis porro velit perferendis sint inventore reprehenderit deleniti adipisci aut at quia recusandae nisi quo dolores?</p>
                     
                     <Link onClick={() => setActiveButton('contact')} className={`btn__primary ${activeButton === 'contact' ? 'active' : ''}`} to='/contact' style={{ textDecoration: 'none'}}>Contact Us</Link>

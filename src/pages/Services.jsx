@@ -63,7 +63,6 @@ const StyledSectionContent = styled(motion.div)`
 
     h2 {
         margin-top: 0;
-        padding-
     }
 
 

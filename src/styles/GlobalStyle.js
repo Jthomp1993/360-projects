@@ -24,6 +24,15 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    :root {
+        --button-width: 30px;
+        --button-height: calc(var(--button-width) * .8);
+        --rectangle-height: calc(var(--button-width) * .1);
+        --rectangle-width: calc(var(--button-width) * .5);
+        --translate: calc(var(--button-width) * .17);
+        --border-radius: calc(var(--button-width) * .04);
+    }
+
     .bgScroll {
         position: fixed;
     }
@@ -74,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
     .burgerIcon {
         font-size: 1.5rem;
         color: #fff;
-        background: #000000;
+        background: #1D1D1D;
         border: none;
         cursor: pointer;
         
@@ -84,14 +93,12 @@ const GlobalStyle = createGlobalStyle`
         position: fixed;
         background-color: #1D1D1D;
         width: 100vw;
-        height: 100vh;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        height: 100%;
+        top: 0;
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
-        z-index: 9999999999999;
+        z-index: 1
 
     }
 

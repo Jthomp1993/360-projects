@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaStream, FaTimes } from 'react-icons/fa';
 import { motion, useViewportScroll } from 'framer-motion';
 import SideNav from './SideNav';
+import HamburgerButton from './HamburgerButton';
 import MainContext from '../context/MainContext';
 
 const Navbar = () => {
@@ -49,17 +49,11 @@ const Navbar = () => {
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
                 onClick={() => setActiveButton('home')} className={activeButton === 'home' ? '' : ''}>
-                <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
+                <img onClick={toggleBurger} className="nav__brand" src={require("../images/brand.png")} alt="360" />
 
                 </Link>
             </div>
             <div className="navButtons">
-                <div className="navButtonItem">
-                    <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}
-                    className={activeButton === 'home' ? 'active' : ''}>
-                        Home
-                    </Link>
-                </div>
                 <div className="navButtonItem">
                     <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'about' ? 'active' : ''}>
@@ -73,20 +67,22 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="navButtonItem">
+                    <Link to='/gallery' style={{ textDecoration: 'none', color: '#fff' }}
+                    className={activeButton === 'gallery' ? 'active' : ''}>
+                        Gallery
+                    </Link>
+                </div>
+                <div className="navButtonItem">
                     <Link to='/contact' style={{ textDecoration: 'none', color: '#fff' }}
                     className={activeButton === 'contact' ? 'active' : ''}>
                         Contact
                     </Link>
                 </div>
                 <div className="navBurgerButton">
-                    <button onClick={toggleBurger} className="burgerIcon">
-                        {burgerIsActive ? (
-                            <FaTimes />
-                        ) : (
-                            <FaStream />
-                        )}
+                    <div onClick={toggleBurger} className="burgerIcon">
+                        <HamburgerButton />
                         
-                    </button>
+                    </div>
                 </div>
             </div>
         </motion.div>
