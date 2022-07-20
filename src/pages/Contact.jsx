@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled from "styled-components";
@@ -63,6 +63,17 @@ const StyledContactContent = styled.div`
 `
 
 const Contact = () => {
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [messageError, setMessageError] = useState(false);
+    const [nameHelper, setNameHelper] = useState('');
+    const [emailHelper, setEmailHelper] = useState('');
+    const [messageHelper, setMessageHelper] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
     const { setActiveButton } = useContext(MainContext);
     const location = useLocation();
 
@@ -71,6 +82,55 @@ const Contact = () => {
             setActiveButton('contact');
         }
     }, [location, setActiveButton])
+
+    const onChange = (e) => {
+        setFormData((prevState) => ({
+            ...prevState,
+            [e.target.id]: e.target.value
+        }))
+        console.log(formData);
+    }
+    
+
+    // Validate and submit form
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        // Check full name is valid
+        var nameRe = /^[a-zA-Z ]{1,}$/;
+        var testName = nameRe.test(formData.name);
+        if(testName === false) {
+            setNameError(true);
+            setNameHelper('Please enter your name.');
+        } else {
+            setNameError(false);
+            setNameHelper('');
+        }
+
+        // Check email is valid
+        var emailRe = /\S+@\S+\.\S+/;
+        var testEmail = emailRe.test(formData.email);
+        if(testEmail === false) {
+            setEmailError(true);
+            setEmailHelper('Please enter a valid email.');
+        } else {
+            setEmailError(false);
+            setEmailHelper('');
+        }
+
+        // Check message is valid
+        var messageRe = /^[a-zA-Z ]{1,}$/;
+        var testMessage = messageRe.test(formData.message);
+        if(testMessage === false) {
+            setMessageError(true);
+            setMessageHelper('Please enter a message.');
+        } else {
+            setMessageError(false);
+            setMessageHelper('');
+        }
+
+
+    }
 
     return (
         <motion.div
@@ -90,6 +150,8 @@ const Contact = () => {
                         <h3>SAY HELLO</h3>
                     <ThemeProvider theme={theme}>
                     <Box
+                    onSubmit={onSubmit}
+                    noValidate
                     component='form' sx={{ width: '100%', }}>
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
@@ -100,7 +162,9 @@ const Contact = () => {
                     },
                     },
                     },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} fullWidth label="Full name" id="name" />
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    onChange={onChange} fullWidth 
+                    error={nameError} helperText={nameHelper} label="Full name" id="name" />
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
@@ -111,7 +175,9 @@ const Contact = () => {
                     },
                     },
                     },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} fullWidth label="Email" id="email" />
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    onChange={onChange} fullWidth 
+                    error={emailError} helperText={emailHelper} required label="Email" id="email" />
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1' }, }} 
                     InputProps={{ style: {color: '#fff'}, sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
@@ -122,7 +188,10 @@ const Contact = () => {
                     },
                     },
                     },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} fullWidth multiline rows={4} label="Message" id="message" />
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    onChange={onChange} fullWidth
+                    error={messageError} helperText={messageHelper} required multiline rows={4} 
+                    label="Message" id="message" />
 
                     <button className="btn__primary" style={{ border: 'none', float: 'right'}}>Submit</button>
                     </Box>
