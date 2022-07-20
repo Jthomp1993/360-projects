@@ -11,6 +11,7 @@ const StyledContactWrapper = styled.section`
     align-items: center;
     justify-content: center;
     padding: 5px;
+    height: 100vh;
 `
 
 const StyledContactContent = styled(motion.div)`
@@ -22,8 +23,7 @@ const StyledContactContent = styled(motion.div)`
     align-items: center;
     color: #FFF;
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    
     
 
     h2 {
@@ -87,11 +87,18 @@ const Contact = () => {
         }
     }, [inView, animation])
 
+    const clickToCopy = async () => {
+        const content = document.getElementById('email').textContent;
+        await navigator.clipboard.writeText(content);
+    }
+
     return (
         <StyledContactWrapper ref={ref}>
             <StyledContactContent
             animate={animation}>
-                    <h2>INFO@360INSTALLS.CO.UK</h2>
+                    <div onClick={clickToCopy}>
+                        <h2 id="copy">info@360installs.co.uk</h2>
+                    </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi quod ipsa, autem ducimus mollitia sequi nulla eligendi, quis similique, distinctio adipisci aut culpa iure necessitatibus illo voluptas at sapiente. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium assumenda tempora eius tenetur, error quis porro velit perferendis sint inventore reprehenderit deleniti adipisci aut at quia recusandae nisi quo dolores?</p>
                     
                     <Link onClick={() => setActiveButton('contact')} className={`btn__primary ${activeButton === 'contact' ? 'active' : ''}`} to='/contact' style={{ textDecoration: 'none'}}>Contact Us</Link>

@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
                 onClick={() => setActiveButton('home')} className={activeButton === 'home' ? '' : ''}>
-                <img onClick={toggleBurger} className="nav__brand" src={require("../images/brand.png")} alt="360" />
+                <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
 
                 </Link>
             </div>

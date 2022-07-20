@@ -129,6 +129,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 1rem;
         font-size: 1rem;
         display: inline-block;
+        cursor: pointer;
     }
 
     .btn__primary:hover {
@@ -175,6 +176,15 @@ const GlobalStyle = createGlobalStyle`
     .footer__brand {
         width: 250px;
         margin-bottom: 2rem;
+    }
+
+    #copy {
+        position: relative;
+        cursor: url('../images/cursor.cur'), copy;
+    }
+
+    .white.Mui-required {
+        color: #fff;
     }
 
 `;

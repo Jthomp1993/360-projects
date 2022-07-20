@@ -59,9 +59,9 @@ const StyledSectionContent = styled(motion.div)`
 
 
     @media screen and (min-width: 320px) {       
-            h2 {
-                font-size: calc(32px + 8 * ((100vw - 320px) / 680));
-            }
+        h2 {
+            font-size: calc(32px + 50 * ((100vw - 320px) / 680));
+        }
     }
 
     @media screen and (min-width: 1000px) {
