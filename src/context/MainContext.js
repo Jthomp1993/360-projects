@@ -7,6 +7,7 @@ export const MainProvider = ( { children } ) => {
     const initialState = null;
     const [burgerIsActive, setBurgerIsActive] = useState(false);
     const [activeButton, setActiveButton] = useState('home');
+    const [isOpen, setIsOpen] = useState(false);
     const [state, dispatch] = useReducer(mainReducer, initialState);
 
     const setSnackbar = (snackbarOpen, type, msg) => {
@@ -29,6 +30,8 @@ export const MainProvider = ( { children } ) => {
     return <MainContext.Provider value={{
         burgerIsActive,
         activeButton,
+        isOpen,
+        setIsOpen,
         setActiveButton,
         setBurgerIsActive,
         snackbar: state, setSnackbar, handleClose,

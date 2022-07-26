@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styled, { css } from "styled-components";
+import MainContext from '../context/MainContext';
 
 const transition = '0.65s';
 
@@ -63,7 +64,7 @@ const BottomRectangle = styled.span`
 `;
 
 const HamburgerButton = ({ color }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, setIsOpen } = useContext(MainContext);
 
     return (
        <Wrapper onClick={() => setIsOpen(!isOpen)}>

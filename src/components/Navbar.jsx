@@ -8,7 +8,7 @@ import MainContext from '../context/MainContext';
 const Navbar = () => {
     const [burgerIsActive, setBurgerIsActive] = useState(false);
     const [hidden, setHidden] = useState(false);
-    const { activeButton, setActiveButton } = useContext(MainContext);
+    const { activeButton, setActiveButton, open, setIsOpen } = useContext(MainContext);
     const { scrollY } = useViewportScroll();
 
     useEffect(() => {
@@ -40,6 +40,11 @@ const Navbar = () => {
         document.body.classList.remove('bgScroll');
     }
 
+    const closeSideNav = () => {
+        setBurgerIsActive(false);
+        setIsOpen(false);
+    }
+
     return (
         <>
             <motion.div className="navWrapper"
@@ -48,7 +53,7 @@ const Navbar = () => {
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
-                onClick={() => setBurgerIsActive(false)} className={activeButton === 'home' ? '' : ''}>
+                onClick={closeSideNav} className={activeButton === 'home' ? '' : ''}>
                 <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
 
                 </Link>
