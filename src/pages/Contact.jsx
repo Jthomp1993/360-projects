@@ -80,6 +80,7 @@ const Contact = () => {
     const form = useRef();
 
     const { setActiveButton } = useContext(MainContext);
+    const { setSnackbar } = useContext(MainContext);
     const location = useLocation();
 
     useEffect(() => {
@@ -142,14 +143,12 @@ const Contact = () => {
             }, (error) => {
                 console.log(error.text);
             });
+            setSnackbar(true, 'success', 'Your message has been sent.');
             e.target.reset();
         
+        } else {
+            setSnackbar(true, 'error', "Please fill out the form correctly.");
         }
-        
-        
-
-
-
     }
 
     return (
