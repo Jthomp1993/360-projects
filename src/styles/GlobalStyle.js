@@ -187,6 +187,10 @@ const GlobalStyle = createGlobalStyle`
         color: #fff;
     }
 
+    input:-webkit-autofill {
+    color: #FFFFFF !important;
+}
+
 `;
 
 export default GlobalStyle;

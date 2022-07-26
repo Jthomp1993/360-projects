@@ -1,7 +1,8 @@
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useContext, useState, useRef } from "react";
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled from "styled-components";
+import emailjs from '@emailjs/browser';
 import MainContext from '../context/MainContext';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -19,6 +20,7 @@ const theme = createTheme({
     },
   },
 });
+
 
 const StyledContactWrapper = styled.div`
     width: 90%;
@@ -41,7 +43,7 @@ const StyledContactWrapper = styled.div`
 const StyledContentWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 4rem;
+    row-gap: 2rem;
 
     @media (max-width: 770px) {
         grid-template-columns: 1fr;
@@ -56,7 +58,7 @@ const StyledContactContent = styled.div`
         h3 {
             font-size: calc(18px + 10 * ((100vw - 320px) / 680));
         }
-        p {
+        p.details {
             font-size: calc(16px + 5 * ((100vw - 320px) / 680));
         }
     }
@@ -74,6 +76,9 @@ const Contact = () => {
         email: '',
         message: ''
     });
+
+    const form = useRef();
+
     const { setActiveButton } = useContext(MainContext);
     const location = useLocation();
 
@@ -83,17 +88,18 @@ const Contact = () => {
         }
     }, [location, setActiveButton])
 
+    // Get values from form
     const onChange = (e) => {
         setFormData((prevState) => ({
             ...prevState,
             [e.target.id]: e.target.value
         }))
-        console.log(formData);
+
     }
     
 
     // Validate and submit form
-    const onSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
 
         // Check full name is valid
@@ -129,6 +135,20 @@ const Contact = () => {
             setMessageHelper('');
         }
 
+        if(testName && testEmail && testMessage) {    
+            emailjs.sendForm('service_d1uv7ik', 'template_bj8mn7a', form.current, 'LOrfm3SwKaxFqONJV')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset();
+        
+        }
+        
+        
+
+
 
     }
 
@@ -142,29 +162,32 @@ const Contact = () => {
                 <StyledContentWrapper>
                     <StyledContactContent>
                         <h3>CONTACT DETAILS</h3>
-                        <p>James Keller Aherne</p>
-                        <p>info@360installs.co.uk</p>
-                        <p>+44 7852739661</p>
+                        <p className="details">James Keller Aherne</p>
+                        <p className="details">info@360installs.co.uk</p>
+                        <p className="details">+44 7852739661</p>
                     </StyledContactContent>
                     <StyledContactContent>
                         <h3>SAY HELLO</h3>
                     <ThemeProvider theme={theme}>
                     <Box
-                    onSubmit={onSubmit}
+                    onSubmit={sendEmail}
+                    ref={form}
                     noValidate
                     component='form' sx={{ width: '100%', }}>
+
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
                         border: "2px solid white",
+                        backgroundColor: 'none'
                     },
                         "&:hover": {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
                         border: "2px solid white",
                     },
                     },
-                    },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    }, 
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
                     onChange={onChange} fullWidth 
-                    error={nameError} helperText={nameHelper} label="Full name" id="name" />
+                    error={nameError} helperText={nameHelper} required label="Full name" name='name' id="name" />
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
@@ -175,9 +198,9 @@ const Contact = () => {
                     },
                     },
                     },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
                     onChange={onChange} fullWidth 
-                    error={emailError} helperText={emailHelper} required label="Email" id="email" />
+                    error={emailError} helperText={emailHelper} className='background' required label="Email" name='email' id="email" />
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1' }, }} 
                     InputProps={{ style: {color: '#fff'}, sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
@@ -188,10 +211,10 @@ const Contact = () => {
                     },
                     },
                     },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '2rem'}} 
+                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
                     onChange={onChange} fullWidth
                     error={messageError} helperText={messageHelper} required multiline rows={4} 
-                    label="Message" id="message" />
+                    label="Message" name='message' id="message" />
 
                     <button className="btn__primary" style={{ border: 'none', float: 'right'}}>Submit</button>
                     </Box>

@@ -48,7 +48,7 @@ const Navbar = () => {
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
-                onClick={() => setActiveButton('home')} className={activeButton === 'home' ? '' : ''}>
+                onClick={() => setBurgerIsActive(false)} className={activeButton === 'home' ? '' : ''}>
                 <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
 
                 </Link>
