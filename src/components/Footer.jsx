@@ -2,35 +2,26 @@ import styled from 'styled-components';
 import { FaGithub } from 'react-icons/fa';
 
 
-const StyledFooterWrapper = styled.footer`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
-
-const StyledFooterContent = styled.div`
+const StyledFlexContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    justify-content: space-between;
+    height: 50vh;
+    padding-top: 2rem;
+    color: #fff;
 
-    h2 {
-        font-size: 30px;
-        font-weight: 200;
-        margin-top: 0px;
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    p {
-        font-size: 16px;
+    .footer__brand {
+        width: 250px;
     }
 
     button {
         cursor: pointer;
-        border: none;
-        margin-bottom: 2rem;
     }
 
     a {
@@ -38,16 +29,8 @@ const StyledFooterContent = styled.div`
         color: #ffffff;
     }
 
-    @media screen and (min-width: 320px) {
-        h2 {
-            font-size: calc(30px + 18 * ((100vw - 320px) / 680));
-        }
-    }
-
-    @media screen and (min-width: 1000px) {
-        h2 {
-            font-size: 2.5rem;
-        }
+    p {
+        margin-right: 5px
     }
 `
 
@@ -61,14 +44,18 @@ const Footer = () => {
     }
 
     return (
-        <StyledFooterWrapper>
-            <StyledFooterContent>
+        <StyledFlexContainer>
+            <div className="item">
             <img className="footer__brand" src={require("../images/logo.png")} alt="360" />
-                <button onClick={scrollToTop} className={`btn__primary`} style={{ textDecoration: 'none'}}>Back to top</button>
-                    <p>Built by <a href="https://github.com/Jthomp1993" target="_blank" rel="noreferrer" ><strong>joshuageorge_coding</strong> <FaGithub /></a></p>
-            </StyledFooterContent>
-        </StyledFooterWrapper>
+            </div>
+            <div className="item">
+            <button onClick={scrollToTop} className={`btn__reverse`} style={{ textDecoration: 'none'}}>Back to top</button>
+            </div>
+            <div className="item">
+            <p>Built by <a href="https://github.com/Jthomp1993" target="_blank" rel="noreferrer" ><strong>joshuageorge_coding</strong></a></p>{' '} <FaGithub />
+            </div>
+        </StyledFlexContainer>
     )
 }
 
-export default Footer
+export default Footer;

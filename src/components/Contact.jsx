@@ -22,7 +22,7 @@ const StyledContactContent = styled(motion.div)`
     justify-content: center;
     align-items: center;
     color: #FFF;
-    text-align: center;
+    
     
     
 
@@ -67,6 +67,7 @@ const StyledContactContent = styled(motion.div)`
 
 const Contact = () => {
     const { activeButton, setActiveButton } = useContext(MainContext);
+    const { setSnackbar } = useContext(MainContext);
 
     const { ref, inView } = useInView();
     const animation = useAnimation();
@@ -88,8 +89,9 @@ const Contact = () => {
     }, [inView, animation])
 
     const clickToCopy = async () => {
-        const content = document.getElementById('email').textContent;
+        const content = document.getElementById('copy').textContent;
         await navigator.clipboard.writeText(content);
+        setSnackbar(true, 'success', 'Copied to clipboard.');
     }
 
     return (

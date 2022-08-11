@@ -84,7 +84,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="navBurgerButton">
-                    <div onClick={toggleBurger} className="burgerIcon">
+                    <div onClick={toggleBurger}>
                         <HamburgerButton />
                         
                     </div>

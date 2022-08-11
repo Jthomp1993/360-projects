@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     /* Navbar */
     .navWrapper {
         width: 100%;
-        height: 100px;
+        height: 120px;
         padding-left: 25px;
         padding-right: 25px;
         margin: auto;
@@ -59,13 +59,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .nav__brand {
-        width: 130px;
+        width: 150px;
     }
 
     .navButtons {
         display: flex;
         justify-content: flex-end;
-        margin-right: 1.5rem;
     }
 
     .navButtonItem {
@@ -132,6 +131,21 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    .btn__reverse {
+        color: #FFF;
+        background-color: #1D1D1D;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        padding: 1rem;
+        font-size: 1rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .btn__reverse:hover {
+        background-color: #333333;
+    }
+
     .btn__primary:hover {
         background-color: #C9C9C9;
     }
@@ -171,11 +185,6 @@ const GlobalStyle = createGlobalStyle`
 
     .green {
         color: green;
-    }
-
-    .footer__brand {
-        width: 200px;
-        margin-bottom: 2rem;
     }
 
     #copy {
