@@ -40,11 +40,11 @@ const StyledServiceWrapper = styled.div`
 
         @media screen and (min-width: 320px) {
         h2 {
-            font-size: calc(22px + 8 * ((100vw - 320px) / 680));
+            font-size: calc(24px + 8 * ((100vw - 320px) / 680));
         }
 
         p {
-            font-size: calc(14px + 2 * ((100vw - 320px) / 680));
+            font-size: calc(16px + 2 * ((100vw - 320px) / 680));
 
         }
 `

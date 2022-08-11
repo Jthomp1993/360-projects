@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState, useRef } from "react";
 import { useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
 import MainContext from '../context/MainContext';
@@ -64,6 +65,38 @@ const StyledContactContent = styled.div`
     }
 `
 
+const StyledSectionWrapper = styled.section`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    background-color: #F0EBD8;
+    margin-top: 6rem;
+`
+
+const StyledSectionContent = styled(motion.div)`
+    text-align: center;
+
+    h2 {
+        margin-top: 0;
+    }
+
+
+    @media screen and (min-width: 320px) {       
+            h2 {
+                font-size: calc(32px + 8 * ((100vw - 320px) / 680));
+            }
+    }
+
+    @media screen and (min-width: 1000px) {
+        
+        h2 {
+            font-size: 3rem;
+        }
+    }
+`
+
 const Contact = () => {
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -82,12 +115,31 @@ const Contact = () => {
     const { setActiveButton } = useContext(MainContext);
     const { setSnackbar } = useContext(MainContext);
     const location = useLocation();
+    const animation = useAnimation();
+    const { ref, inView } = useInView();
+
 
     useEffect(() => {
         if(location.pathname === '/contact') {
             setActiveButton('contact');
         }
     }, [location, setActiveButton])
+
+    useEffect(() => {
+        if(inView) {
+            animation.start({
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 1, bounce: 0.3
+                }
+            })
+        }
+        if(!inView) {
+            animation.start({
+                x: '100vw'
+            })
+        }
+    }, [location, inView, animation])
 
     // Get values from form
     const onChange = (e) => {
@@ -162,7 +214,7 @@ const Contact = () => {
                         <h3>CONTACT DETAILS</h3>
                         <p className="details">James Keller Aherne</p>
                         <p className="details">info@360installs.co.uk</p>
-                        <p className="details">+44 7852739661</p>
+                        <p className="details">+44 7795577101</p>
                     </StyledContactContent>
                     <StyledContactContent>
                         <h3>SAY HELLO</h3>
@@ -220,6 +272,11 @@ const Contact = () => {
                     </StyledContactContent>
                 </StyledContentWrapper>
             </StyledContactWrapper>
+            <StyledSectionWrapper ref={ref}>
+                <StyledSectionContent animate={animation}>
+                    <h2>We'll look forward to hearing from you.</h2>
+                </StyledSectionContent>
+            </StyledSectionWrapper>
         </motion.div>
     )
 }
