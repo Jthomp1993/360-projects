@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     /* Navbar */
     .navWrapper {
         width: 100%;
-        height: 120px;
+        height: 100px;
         padding-left: 25px;
         padding-right: 25px;
         margin: auto;
@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .nav__brand {
-        width: 175px;
+        width: 130px;
     }
 
     .navButtons {
@@ -174,7 +174,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .footer__brand {
-        width: 250px;
+        width: 200px;
         margin-bottom: 2rem;
     }
 

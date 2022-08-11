@@ -15,6 +15,11 @@ const Navbar = () => {
         return scrollY.onChange(() => update());
     })
 
+    const closeSideNav = () => {
+        setBurgerIsActive(false);
+        setIsOpen(false);
+    }
+
     const update = () => {
         if (scrollY?.current < scrollY?.prev) {
             setHidden(false);
@@ -40,11 +45,6 @@ const Navbar = () => {
         document.body.classList.remove('bgScroll');
     }
 
-    const closeSideNav = () => {
-        setBurgerIsActive(false);
-        setIsOpen(false);
-    }
-
     return (
         <>
             <motion.div className="navWrapper"
@@ -54,13 +54,13 @@ const Navbar = () => {
             <div className="logo">
                 <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}
                 onClick={closeSideNav} className={activeButton === 'home' ? '' : ''}>
-                <img className="nav__brand" src={require("../images/brand.png")} alt="360" />
+                <img className="nav__brand" src={require("../images/logo.png")} alt="360" />
 
                 </Link>
             </div>
             <div className="navButtons">
                 <div className="navButtonItem">
-                    <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }}
+                    <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }} onClick={closeSideNav}
                     className={activeButton === 'about' ? 'active' : ''}>
                         About
                     </Link>

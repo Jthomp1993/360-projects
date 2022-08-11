@@ -98,7 +98,6 @@ const Contact = () => {
 
     }
     
-
     // Validate and submit form
     const sendEmail = (e) => {
         e.preventDefault();

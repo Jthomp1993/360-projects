@@ -63,7 +63,7 @@ const Footer = () => {
     return (
         <StyledFooterWrapper>
             <StyledFooterContent>
-            <img className="footer__brand" src={require("../images/brand.png")} alt="360" />
+            <img className="footer__brand" src={require("../images/logo.png")} alt="360" />
                 <button onClick={scrollToTop} className={`btn__primary`} style={{ textDecoration: 'none'}}>Back to top</button>
                     <p>Built by <a href="https://github.com/Jthomp1993" target="_blank" rel="noreferrer" ><strong>joshuageorge_coding</strong> <FaGithub /></a></p>
             </StyledFooterContent>
