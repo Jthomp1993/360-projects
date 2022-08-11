@@ -111,7 +111,6 @@ const Contact = () => {
     });
 
     const form = useRef();
-
     const { setActiveButton } = useContext(MainContext);
     const { setSnackbar } = useContext(MainContext);
     const location = useLocation();

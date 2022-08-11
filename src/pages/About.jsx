@@ -12,13 +12,36 @@ const StyledHeroWrapper = styled.div`
     z-index: -1;
     color: #ffffff;
 
+    @media screen and (min-width: 320px) {
+            width: calc(90vw + 5 * ((100vw - 320px) / 680)); 
+            
+    }
+
+    @media screen and (min-width: 1000px) {
+        width: 95vw;
+        
+    }
+`
+
+const StyledContent = styled.div`
+    margin: auto;
+    margin-top: 2rem;
+    z-index: -1;
+    color: #ffffff;
+
     h2 {
         font-size: clamp(2.5rem, 5vw, 3.7rem);
     }
 
     p {
         line-height: 1.7;
-        
+        width: 60vw;
+    }
+
+    @media screen and (max-width: 820px) {
+        p {
+            width: 100%;
+        }
     }
 
     @media screen and (min-width: 320px) {
@@ -34,7 +57,6 @@ const StyledHeroWrapper = styled.div`
         
         p {
             font-size: 24px;
-            padding: 0 1rem 0 1rem;
         }
     }
 `
@@ -106,13 +128,16 @@ const About = () => {
         exit={{ opacity: 0}}>
         <StyledHeroWrapper>
         <img className="hero__image" src={require("../images/about__hero.jpg")} alt="360" />
-        <div>
-        <h2>About us</h2>
-        <p>London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eius doloremque excepturi delectus cupiditate! Nobis cumque pariatur, deleniti quisquam neque, officiis alias repellendus, quae cupiditate excepturi aliquam harum rerum ipsum?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur odit ea ex impedit repellendus sequi dicta optio amet voluptas. Totam unde odio itaque explicabo excepturi dolorem incidunt perspiciatis cum!</p>
-        </div>
         </StyledHeroWrapper>
+        <StyledContent>
+            <div>
+            <h2>About us</h2>
+            <p>London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eius doloremque excepturi delectus cupiditate! Nobis cumque pariatur, deleniti quisquam neque, officiis alias repellendus, quae cupiditate excepturi aliquam harum rerum ipsum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur odit ea ex impedit repellendus sequi dicta optio amet voluptas. Totam unde odio itaque explicabo excepturi dolorem incidunt perspiciatis cum!</p>
+            </div>
+        </StyledContent>
         <StyledSectionWrapper ref={ref}>
             <StyledSectionContent
             animate={animation}>
