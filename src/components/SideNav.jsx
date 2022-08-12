@@ -26,27 +26,6 @@ const StyledMenu = styled.div`
     }
 `
 
-const StyledHeader = styled.header`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 120px;
-    color: #fff;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        color: #fff;
-    }
-
-`
-
 const SideNav = ({ burgerIsActive }, props) => {
     const { setBurgerIsActive, activeButton } = useContext(MainContext);
 

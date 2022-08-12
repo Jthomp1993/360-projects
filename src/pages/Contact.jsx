@@ -24,7 +24,7 @@ const theme = createTheme({
 
 
 const StyledContactWrapper = styled.div`
-    width: 90%;
+    width: 95vw;
     margin: auto;
     margin-top: 2rem;
     color: #FFF;

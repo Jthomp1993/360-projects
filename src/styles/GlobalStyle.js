@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         max-width: 100%;
         min-height: 100%;
-        background-color: #1D1D1D;
+        background-color: #111111;
         overflow-x: clip;
 
         @media (max-width: 320px) {
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
         padding-left: 25px;
         padding-right: 25px;
         margin: auto;
-        background-color: #1D1D1D;
+        background-color: #111111;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .nav__brand {
-        width: 150px;
+        width: 130px;
     }
 
     .navButtons {
@@ -90,7 +90,7 @@ const GlobalStyle = createGlobalStyle`
 
     .sideNavWrapper {
         position: fixed;
-        background-color: #1D1D1D;
+        background-color: #111111;
         width: 100vw;
         height: 100%;
         top: 0;

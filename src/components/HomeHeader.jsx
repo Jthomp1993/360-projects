@@ -5,13 +5,12 @@ const StyledHeaderWrapper = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 3rem;
+    height: 80vh;
 `
 
 const StyledHeaderContent = styled.div`
-    width: 95%;
+    width: 95vw;
     margin: auto;
-    padding: 20px;
     color: #fff;
 
     h1 {
@@ -20,15 +19,15 @@ const StyledHeaderContent = styled.div`
         font-weight: 400;
         width: 75%;
         line-height: 1.25;
-    }
+    } 
 
-    @media (max-width: 820px) {
+    @media screen and (max-width: 820px) {
+        width: 90vw;
+
         h1 {
             width: 100%;
         }
     }
-
-    
 `
 
 const HomeHeader = () => {

@@ -8,6 +8,7 @@ const StyledFlexContainer = styled.div`
     justify-content: space-between;
     height: 50vh;
     padding-top: 2rem;
+    padding-bottom: 1rem;
     color: #fff;
 
     .item {
@@ -17,7 +18,7 @@ const StyledFlexContainer = styled.div`
     }
 
     .footer__brand {
-        width: 250px;
+        width: 230px;
     }
 
     button {
