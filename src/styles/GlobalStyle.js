@@ -199,7 +199,6 @@ const GlobalStyle = createGlobalStyle`
     input:-webkit-autofill {
     color: #FFFFFF !important;
 }
-
 `;
 
 export default GlobalStyle;

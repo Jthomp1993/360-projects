@@ -26,7 +26,6 @@ export const MainProvider = ( { children } ) => {
     dispatch({ type: 'REMOVE_SNACKBAR'})
     };
 
-
     return <MainContext.Provider value={{
         burgerIsActive,
         activeButton,

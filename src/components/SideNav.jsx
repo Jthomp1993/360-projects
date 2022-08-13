@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
-import { FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import MainContext from '../context/MainContext';
 
@@ -27,8 +26,8 @@ const StyledMenu = styled.div`
 `
 
 const SideNav = ({ burgerIsActive }, props) => {
-    const { setBurgerIsActive, activeButton } = useContext(MainContext);
-
+    const { activeButton } = useContext(MainContext);
+    
     return (
         <AnimatePresence>
             {burgerIsActive && (

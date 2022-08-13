@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 import styled from "styled-components";
 import MainContext from '../context/MainContext';
 
-
 const StyledHeroWrapper = styled.div`
     margin: auto;
     margin-top: 2rem;
@@ -143,7 +142,6 @@ const About = () => {
             animate={animation}>
             <h2>Let's work together.</h2>
             <Link className={`btn__dark ${activeButton === 'contact' ? 'active' : ''}`} to='/contact' style={{ textDecoration: 'none'}}>Contact Us</Link>
-            
             </StyledSectionContent>
         </StyledSectionWrapper>
         </motion.div>

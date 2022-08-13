@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { FaGithub } from 'react-icons/fa';
 
-
 const StyledFlexContainer = styled.div`
     display: flex;
     flex-direction: column;

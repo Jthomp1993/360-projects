@@ -92,7 +92,6 @@ const Navbar = () => {
             </div>
         </motion.div>
         
-
         <SideNav burgerIsActive={burgerIsActive} closeMenu={(burgerIsActive) => setBurgerIsActive(burgerIsActive)} />
         </>
     )

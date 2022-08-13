@@ -99,7 +99,7 @@ const Services = () => {
             <StyledLayer ref={ref}>
                 <StyledContent
                 animate={animation}>
-                    <h2>SERVICES</h2>
+                    <h2>Services</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere at eum molestias cupiditate ab saepe cum quae delectus, iure ipsam quam quidem culpa! Magni illo veniam sed laboriosam corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, dolorem, eveniet illum ratione tempora sapiente illo minima nostrum amet provident iure deleniti labore optio. Autem a laudantium nam aperiam natus</p>
 
                     <Link onClick={() => setActiveButton('services')} className={`btn__primary ${activeButton === 'services' ? 'active' : ''}`} to='/services' style={{ textDecoration: 'none'}}>View Services</Link>

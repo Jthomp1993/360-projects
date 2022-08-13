@@ -6,7 +6,6 @@ import styled from "styled-components";
 import items from '../data/galleryData';
 import MainContext from '../context/MainContext';
 
-
 const StyledGalleryWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
