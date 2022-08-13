@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         background-color: #111111;
         overflow-x: clip;
+        position: relative;
 
         @media (max-width: 320px) {
             word-break: break-all;
