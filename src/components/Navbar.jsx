@@ -8,7 +8,7 @@ import MainContext from '../context/MainContext';
 const Navbar = () => {
     const [burgerIsActive, setBurgerIsActive] = useState(false);
     const [hidden, setHidden] = useState(false);
-    const { activeButton, setActiveButton, open, setIsOpen } = useContext(MainContext);
+    const { activeButton, setIsOpen } = useContext(MainContext);
     const { scrollY } = useViewportScroll();
 
     useEffect(() => {

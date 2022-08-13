@@ -21,9 +21,6 @@ const items = [
         img: 'IMG_1628.jpg'
     },
     {
-        img: 'IMG_1679.jpg'
-    },
-    {
         img: 'IMG_2787.jpg'
     },
     {

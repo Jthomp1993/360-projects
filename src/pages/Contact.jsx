@@ -117,6 +117,9 @@ const Contact = () => {
     const animation = useAnimation();
     const { ref, inView } = useInView();
 
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
     useEffect(() => {
         if(location.pathname === '/contact') {
@@ -187,7 +190,7 @@ const Contact = () => {
         }
 
         if(testName && testEmail && testMessage) {    
-            emailjs.sendForm('service_d1uv7ik', 'template_bj8mn7a', form.current, 'LOrfm3SwKaxFqONJV')
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
