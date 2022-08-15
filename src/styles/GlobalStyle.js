@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components/macro";
 const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
-        overflow-x: clip;
+        overflow-x: hidden;
     }
     *,
     *:before,
@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         min-height: 100%;
         background-color: #111111;
-        overflow-x: clip;
+        overflow-x: hidden;
         position: relative;
 
         @media (max-width: 320px) {
