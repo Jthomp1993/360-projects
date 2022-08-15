@@ -33,10 +33,10 @@ const SideNav = ({ burgerIsActive }, props) => {
         <AnimatePresence>
             {burgerIsActive && (
                 <motion.aside className="sideNavWrapper"
-                initial={{ x: '100vw' }}
-                animate={{ x: '0' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                exit={{ x: '100vw' }}
+                exit={{ opacity: 0 }}
                 >
                     <StyledMenu>
                         <Link to='/about' style={{ textDecoration: 'none', color: '#fff' }} onClick={() => props.closeMenu(false)}>
