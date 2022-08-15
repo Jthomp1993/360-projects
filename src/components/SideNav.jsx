@@ -11,6 +11,7 @@ const StyledMenu = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+    overflow: hidden;
 
     h2 {
         font-size: 2rem;
