@@ -98,7 +98,8 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
-        z-index: 1
+        z-index: 1;
+        overflow-x: clip;
 
     }
 
