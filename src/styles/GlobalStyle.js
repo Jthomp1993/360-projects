@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        position: sticky;
+        position: fixed;
         top: 0px;
         z-index: 999999999999999;
 
