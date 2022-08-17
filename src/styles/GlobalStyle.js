@@ -75,6 +75,10 @@ const GlobalStyle = createGlobalStyle`
         padding-left: 2rem;
     }
 
+    .block {
+        padding-top: 120px;
+    }
+
     .active {
         border-bottom: 2px solid #ffffff;
         padding-bottom: 5px;

@@ -20,6 +20,10 @@ const theme = createTheme({
       main: '#11cb5f',
     },
   },
+  notchedOutline: {
+    borderWidth: "1px",
+    borderColor: "yellow !important"
+  }
 });
 
 
@@ -227,6 +231,7 @@ const Contact = () => {
                     noValidate
                     component='form' sx={{ width: '100%', }}>
 
+                    {/*  
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
                         border: "2px solid white",
@@ -240,31 +245,45 @@ const Contact = () => {
                     }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
                     onChange={onChange} fullWidth 
                     error={nameError} helperText={nameHelper} required label="Full name" name='name' id="name" />
+                    */}
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
-                    InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                    },
-                        "&:hover": {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                    },
-                    },
-                    },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
+                    sx={{ input: {color: '#fff' }, marginBottom: '1rem',
+                    "& .MuiInputLabel-root": {color: 'white'},
+                    "& .MuiOutlinedInput-root": {
+                        "& > fieldset": { border: "2px solid white" },
+                    },  "& .MuiOutlinedInput-root:hover": {
+                        "& > fieldset": {
+                          borderColor: "white"
+                        }
+                    }}} 
+                    onChange={onChange} fullWidth 
+                    error={nameError} helperText={nameHelper} required label="Full name" name='name' id="name" />
+
+                    <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
+                    sx={{ input: {color: '#fff' }, marginBottom: '1rem',
+                    "& .MuiInputLabel-root": {color: 'white'},
+                    "& .MuiOutlinedInput-root": {
+                        "& > fieldset": { border: "2px solid white" },
+                    },  "& .MuiOutlinedInput-root:hover": {
+                        "& > fieldset": {
+                          borderColor: "white"
+                        }
+                    }}} 
                     onChange={onChange} fullWidth 
                     error={emailError} helperText={emailHelper} className='background' required label="Email" name='email' id="email" />
 
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1' }, }} 
-                    InputProps={{ style: {color: '#fff'}, sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                    },
-                        "&:hover": {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                    },
-                    },
-                    },
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
-                    onChange={onChange} fullWidth
+                    sx={{ input: {color: '#fff' }, marginBottom: '1rem',
+                    "& .MuiInputLabel-root": {color: 'white'},
+                    "& .MuiOutlinedInput-root": {
+                        "& > fieldset": { border: "2px solid white" },
+                    },  "& .MuiOutlinedInput-root:hover": {
+                        "& > fieldset": {
+                          borderColor: "white"
+                        }
+                    }}} InputProps={{ sx: {color: '#fff'}}}
+                    onChange={onChange} fullWidth variant='outlined'
                     error={messageError} helperText={messageHelper} required multiline rows={4} 
                     label="Message" name='message' id="message" />
 

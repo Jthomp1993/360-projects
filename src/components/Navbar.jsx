@@ -91,6 +91,7 @@ const Navbar = () => {
                 </div>
             </div>
         </motion.div>
+        <div className='block'></div>
         
         <SideNav burgerIsActive={burgerIsActive} closeMenu={(burgerIsActive) => setBurgerIsActive(burgerIsActive)} />
         </>
