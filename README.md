@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Web application for 360 Signs & Graphics built with ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[View the deployed project here.](https://360-projects.vercel.app/)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+![OG Image](./src/images/readme_images/og.png)
 
-### `npm start`
+<p>I recently built this application for 360 Signs & Graphics who are a London based Signs & Graphics business. Since starting in 2019 they have completed projects for the likes of Warner Brothers Studios, Tottenham Hotspur, Premier League, Pizza Express and many more. The purpose of the website is to help the client grow as a business and add to their already impressive client base.
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Languages
 
-### `npm test`
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Libraries, frameworks, databases and editors
 
-### `npm run build`
+- [Github](https://github.com/) - This was used to store the repository for my application.
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - This was used for version control throughout the development of my application.
+- [ReactJS](https://reactjs.org/) - React was the main framework used to build the application.
+- [Material UI](https://mui.com/) - Material UI was used to create the contact form and snackbar notifications.
+- [Framer Motion](https://www.framer.com/motion/) - Framer Motion was used to animate elements and page transitions.
+- [Styled components](https://styled-components.com/) - Styled components was used to style individual components within the application. \*[EmailJS](https://www.emailjs.com/) - EmailJS was used to allow users to send emails directly to 360 Projects & Graphics from contact page.
+- [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv was used to load variables from the .env file into process.env.
+- [Vercel](https://vercel.com) - Vercel was used to deploy and host the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tools
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - Photoshop was used to optomize image files.
+- [Figma](https://www.figma.com/) - I used Figma to create the wireframes for the application.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - Chrome Developer Tools was used extensively throughout the development process.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
 
-### `npm run eject`
+1. Install dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```sh
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Generate a full static production build.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```sh
+   npm run build
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Preview the site as it will appear once deployed
 
-## Learn More
+   ```sh
+   npm run serve
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Create a new Vercel project, link your github account and select the repository you want to deploy and import it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Add any environment variables stored in the .env file.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. Finally, deploy the project to the web.

@@ -231,22 +231,6 @@ const Contact = () => {
                     noValidate
                     component='form' sx={{ width: '100%', }}>
 
-                    {/*  
-                    <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
-                    InputProps={{ sx: {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                        backgroundColor: 'none'
-                    },
-                        "&:hover": {".css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                        border: "2px solid white",
-                    },
-                    },
-                    }, 
-                    }} sx={{ input: {color: '#fff' }, marginBottom: '1rem'}} 
-                    onChange={onChange} fullWidth 
-                    error={nameError} helperText={nameHelper} required label="Full name" name='name' id="name" />
-                    */}
-
                     <TextField InputLabelProps={{ style: { color: "white", zIndex: '-1', }, }} 
                     sx={{ input: {color: '#fff' }, marginBottom: '1rem',
                     "& .MuiInputLabel-root": {color: 'white'},
