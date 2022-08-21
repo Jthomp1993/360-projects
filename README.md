@@ -4,7 +4,7 @@
 
 ---
 
-![OG Image](./src/images/readme_images/og.png)
+![OG Image](src/images/og.png)
 
 <p>I recently built this application for 360 Signs & Graphics who are a London based Signs & Graphics business. Since starting in 2019 they have completed projects for the likes of Warner Brothers Studios, Tottenham Hotspur, Premier League, Pizza Express and many more. The purpose of the website is to help the client grow as a business and add to their already impressive client base.
 </p>
