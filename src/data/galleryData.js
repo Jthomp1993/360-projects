@@ -15,9 +15,6 @@ const items = [
         img: 'IMG_1195.jpg'
     },
     {
-        img: 'IMG_1196.jpg'
-    },
-    {
         img: 'IMG_1628.jpg'
     },
     {
@@ -42,9 +39,6 @@ const items = [
         img: 'IMG_3707 (1).jpg'
     },
     {
-        img: 'IMG_3708.jpg'
-    },
-    {
         img: 'IMG_3838 (1).jpg'
     },
     {
@@ -57,9 +51,6 @@ const items = [
         img: 'IMG_5218.jpg'
     },
     {
-        img: 'IMG_5222.jpg'
-    },
-    {
         img: 'IMG_5224.jpg'
     },
     {
@@ -70,9 +61,6 @@ const items = [
     },
     {
         img: 'IMG_7161.jpg'
-    },
-    {
-        img: 'IMG_7162.jpg'
     },
     {
         img: 'IMG_7165.jpg'
@@ -88,15 +76,6 @@ const items = [
     },
     {
         img: 'IMG_8688.jpg'
-    },
-    {
-        img: 'IMG_8689.jpg'
-    },
-    {
-        img: 'IMG_8691.jpg'
-    },
-    {
-        img: 'IMG_8694.jpg'
     }
 ]
 

@@ -7,16 +7,16 @@ import items from '../data/galleryData';
 import MainContext from '../context/MainContext';
 
 const StyledGalleryWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     margin-top: 2rem;
     width: 95%;
-    gap: 2rem;
+    columns: 2;
+    column-gap: 1rem;
+
     z-index: -1;
 
-    @media (max-width: 770px) {
-        grid-template-columns: 1fr;
+    @media (min-width: 1023px) {
+        columns: 3;
     }
 
 `
@@ -25,8 +25,8 @@ const StyledGalleryItem = styled.div`
 
     .img {
         width: 100%;
-        height: 60vh;
-        object-fit: cover;
+        object-fit: contain;
+        margin-bottom: 1rem;
     }
 
 `

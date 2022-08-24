@@ -181,8 +181,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .hero__image {
-        width: 100%;
-        
+        width: 100%; 
     }
 
     .white {
