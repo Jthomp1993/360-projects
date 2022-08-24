@@ -19,12 +19,13 @@
 
 ### Libraries, frameworks, databases and editors
 
-- [Github](https://github.com/) - This was used to store the repository for my application.
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - This was used for version control throughout the development of my application.
+- [Github](https://github.com/) - This was used to store the repository for the application.
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - This was used for version control throughout the development process.
 - [ReactJS](https://reactjs.org/) - React was the main framework used to build the application.
 - [Material UI](https://mui.com/) - Material UI was used to create the contact form and snackbar notifications.
 - [Framer Motion](https://www.framer.com/motion/) - Framer Motion was used to animate elements and page transitions.
-- [Styled components](https://styled-components.com/) - Styled components was used to style individual components within the application. \*[EmailJS](https://www.emailjs.com/) - EmailJS was used to allow users to send emails directly to 360 Projects & Graphics from contact page.
+- [Styled components](https://styled-components.com/) - Styled components was used to style individual components within the application.
+- [EmailJS](https://www.emailjs.com/) - EmailJS was used to allow users to send emails directly to 360 Projects & Graphics from contact page.
 - [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv was used to load variables from the .env file into process.env.
 - [Vercel](https://vercel.com) - Vercel was used to deploy and host the application.
 
