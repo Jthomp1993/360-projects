@@ -34,6 +34,7 @@ const StyledContactWrapper = styled.div`
     color: #FFF;
     z-index: -9999999;
 
+
     h2 {
         margin-top: 0;
     }

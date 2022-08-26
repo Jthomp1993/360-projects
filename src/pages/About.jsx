@@ -131,10 +131,9 @@ const About = () => {
         <StyledContent>
             <div>
             <h2>About us</h2>
-            <p>London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eius doloremque excepturi delectus cupiditate! Nobis cumque pariatur, deleniti quisquam neque, officiis alias repellendus, quae cupiditate excepturi aliquam harum rerum ipsum?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quidem explicabo eius praesentium velit est expedita. Excepturi impedit assumenda quod! Ad aut sit autem quaerat. Sequi blanditiis iste cum beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam quis quam cumque, provident blanditiis aliquam maxime debitis accusantium fuga porro exercitationem officiis natus quisquam non inventore voluptatum reprehenderit animi!</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur odit ea ex impedit repellendus sequi dicta optio amet voluptas. Totam unde odio itaque explicabo excepturi dolorem incidunt perspiciatis cum!</p>
+            <p>Bespoke Signage and Graphic Company providing services from initial design through to installation and maintenance. With a wealth of professional experience lasting over a decade, we pride ourselves on variation and high finish. Transforming commercial spaces in order to grow businesses and improve functionality is what we do best and we’re always striving for excellence.</p>
+            <p>The home of our business lies in London but there is no limit to where our work will take us. Having worked in the signage industry for almost 20 years, we really do have a great deal of expertise and knowledge to impart. We have been lucky enough to work on projects at some of London’s most iconic buildings and attractions and have helped new independent businesses to take their first steps to building a distinguished brand. No job is too big or too small. Whatever signage you require, we can help you. </p>
+            <p>At 360 we really do cover all angles. </p>
             </div>
         </StyledContent>
         <StyledSectionWrapper ref={ref}>

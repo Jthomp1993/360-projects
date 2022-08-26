@@ -14,12 +14,17 @@ const StyledHeaderContent = styled.div`
     color: #fff;
 
     h1 {
-        font-size: clamp(2.5rem, 5vw, 3.7rem);
         margin-top: 7.5rem;
         font-weight: 400;
         width: 75%;
         line-height: 1.25;
     } 
+
+    @media screen and (min-width: 320px) {
+        h1 {
+            font-size: calc(32px + 15 * ((100vw - 320px) / 680));
+        }
+    }
 
     @media screen and (max-width: 820px) {
         width: 90vw;
@@ -40,7 +45,7 @@ const HomeHeader = () => {
                     animate={{ opacity: 1, x: [0, 100, 0] }}
                     transition={{ duration: 1}}>
                     <h1>
-                        London Based Bespoke Signage & Graphic Installations with over 10 years of professional experience.
+                        London based bespoke signage and graphic company providing services from initial design through to installation and maintenance.
                     </h1>
                 </motion.div>
             </StyledHeaderContent>

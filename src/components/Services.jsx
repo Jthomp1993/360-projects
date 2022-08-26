@@ -16,15 +16,16 @@ const StyledLayer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 10px;
 `
 
 const StyledContent = styled(motion.div)`
-    width: 80vw;
+    width: 75vw;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -43,6 +44,7 @@ const StyledContent = styled(motion.div)`
 
     p {
         font-size: 16px;
+        font-weight: 600;
         line-height: 1.7;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -53,7 +55,7 @@ const StyledContent = styled(motion.div)`
             font-size: calc(30px + 18 * ((100vw - 320px) / 680));
         }
         p {
-            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            font-size: calc(18px + 4 * ((100vw - 320px) / 680));
         }
     }
 
@@ -100,7 +102,7 @@ const Services = () => {
                 <StyledContent
                 animate={animation}>
                     <h2>Services</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere at eum molestias cupiditate ab saepe cum quae delectus, iure ipsam quam quidem culpa! Magni illo veniam sed laboriosam corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, dolorem, eveniet illum ratione tempora sapiente illo minima nostrum amet provident iure deleniti labore optio. Autem a laudantium nam aperiam natus</p>
+                    <p>Our name says it all. When it comes to signage, we can offer a whole spectrum of services. From vinyls and graphics to illuminated fascia’s, we can provide high quality products and service. Helping you to maintain and update your look thereafter is an important part of what we do.</p>
 
                     <Link onClick={() => setActiveButton('services')} className={`btn__primary ${activeButton === 'services' ? 'active' : ''}`} to='/services' style={{ textDecoration: 'none'}}>View Services</Link>
                 </StyledContent>

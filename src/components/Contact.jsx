@@ -10,12 +10,12 @@ const StyledContactWrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 10px;
     height: 100vh;
 `
 
 const StyledContactContent = styled(motion.div)`
-    width: 80vw;
+    width: 75vw;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@ const StyledContactContent = styled(motion.div)`
 
     p {
         font-size: 16px;
+        font-weight: 600;
         line-height: 1.7;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -46,7 +47,7 @@ const StyledContactContent = styled(motion.div)`
             font-size: calc(30px + 18 * ((100vw - 320px) / 680));
         }
         p {
-            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            font-size: calc(18px + 4 * ((100vw - 320px) / 680));
         }
     }
 
@@ -101,7 +102,7 @@ const Contact = () => {
                     <div onClick={clickToCopy}>
                         <h2 id="copy">info@360installs.co.uk</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi quod ipsa, autem ducimus mollitia sequi nulla eligendi, quis similique, distinctio adipisci aut culpa iure necessitatibus illo voluptas at sapiente. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium assumenda tempora eius tenetur, error quis porro velit perferendis sint inventore reprehenderit deleniti adipisci aut at quia recusandae nisi quo dolores?</p>
+                    <p>Looking to smarten up or rebrand your business? Perhaps your shopfront needs a new look or people need a clearer idea of the way to go? If you’d like to know more about what we can offer or are interested in receiving a quote then please do not hesitate to get in touch. We’d be more than happy to help.  </p>
                     
                     <Link onClick={() => setActiveButton('contact')} className={`btn__primary ${activeButton === 'contact' ? 'active' : ''}`} to='/contact' style={{ textDecoration: 'none'}}>Contact Us</Link>
                       
