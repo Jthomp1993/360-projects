@@ -28,7 +28,7 @@ const StyledContactContent = styled(motion.div)`
 
     h2 {
         font-size: 30px;
-        font-weight: 800;
+        font-family: 'maison__bold';
         margin: 0px;
         text-decoration: underline;
         text-underline-offset: 10px;
@@ -36,7 +36,6 @@ const StyledContactContent = styled(motion.div)`
 
     p {
         font-size: 16px;
-        font-weight: 600;
         line-height: 1.7;
         margin-top: 2rem;
         margin-bottom: 2rem;

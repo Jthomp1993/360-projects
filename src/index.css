@@ -1,10 +1,34 @@
+@font-face {
+    font-family: 'Maison__thin';
+    src: url('../public/fonts/MaisonNeue-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Maison__medium';
+    src: url('../public/fonts/MaisonNeue-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Maison__demi';
+    src: url('../public/fonts/MaisonNeue-Demi.otf');
+}
+
+@font-face {
+    font-family: 'Maison__light';
+    src: url('../public/fonts/MaisonNeue-Light.otf');
+}
+
+@font-face {
+    font-family: 'Maison__bold';
+    src: url('../public/fonts/MaisonNeue-Bold.otf');
+}
 
 body {
   margin: 0;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Maison Neue', sans-serif;
+  font-family: 'Maison__medium', sans-serif;
   font-display: swap;
   overflow-wrap: break-word;
 }

@@ -30,6 +30,7 @@ const StyledContent = styled.div`
 
     h2 {
         font-size: clamp(2.5rem, 5vw, 3.7rem);
+        font-family: 'maison__bold';
     }
 
     p {
@@ -49,6 +50,11 @@ const StyledContent = styled.div`
             p {
                 font-size: calc(16px + 8 * ((100vw - 320px) / 680));
             }
+
+            h2 {
+                font-size: calc(30px + 18 * ((100vw - 320px) / 680));
+                font-family: 'maison__bold';
+    }
     }
 
     @media screen and (min-width: 1000px) {
@@ -75,7 +81,6 @@ const StyledSectionContent = styled(motion.div)`
 
     h2 {
         margin-top: 0;
-        padding-
     }
 
 

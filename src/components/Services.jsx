@@ -44,7 +44,6 @@ const StyledContent = styled(motion.div)`
 
     p {
         font-size: 16px;
-        font-weight: 600;
         line-height: 1.7;
         margin-top: 2rem;
         margin-bottom: 2rem;

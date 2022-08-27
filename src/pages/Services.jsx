@@ -47,6 +47,7 @@ const StyledServiceWrapper = styled.div`
             font-size: calc(16px + 2 * ((100vw - 320px) / 680));
 
         }
+    }
 `
 const StyledSectionWrapper = styled.section`
     display: flex;
