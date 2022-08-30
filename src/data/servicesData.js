@@ -6,8 +6,8 @@ const items = [
     },
     {
         img: "fascia.jpg",
-        title: "Fascia's",
-        info: "Your shopfront sign is a key component in the identity of your business. Therefore it is important that it gives the correct impression. At 360 we are used to designing new fascia’s with businesses in order to transform their visual appearance. These can be made using a wide variety of materials and depending on your choices can be paired with flat or built up letters for extra impact. We can illuminate fascia’s using trough lighting or more modern LED lighting. "
+        title: "Fascias",
+        info: "Your shopfront sign is a key component in the identity of your business. Therefore it is important that it gives the correct impression. At 360 we are used to designing new fascias with businesses in order to transform their visual appearance. These can be made using a wide variety of materials and depending on your choices can be paired with flat or built up letters for extra impact. We can illuminate fascias using trough lighting or more modern LED lighting."
     },
     {
         img: "illuminated__box.jpg",
