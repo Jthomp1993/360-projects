@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components/macro';
 import HomeHeader from '../components/HomeHeader';
+import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import Services from '../components/Services';
@@ -72,7 +73,7 @@ const Home = () => {
         initial={{ opacity: 0}}
         animate={{ opacity: 1}}
         exit={{ opacity: 0}}>
-            <HomeHeader />
+            <Header />
             <Banner />
             <Contact />
             <Services />
