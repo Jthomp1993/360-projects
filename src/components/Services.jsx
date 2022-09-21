@@ -4,19 +4,16 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components/macro';
 import MainContext from '../context/MainContext';
-import img from '../images/services__background.jpg';
 
 const StyledServicesWrapper = styled.section`
     height: 100vh;
-    background-image: url(${img});
-    background-size: cover;
+    
 `
 
 const StyledLayer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     width: 100%;

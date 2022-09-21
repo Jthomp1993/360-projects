@@ -74,8 +74,13 @@ const Home = () => {
         animate={{ opacity: 1}}
         exit={{ opacity: 0}}>
             <Header />
-            <Banner />
+            <StyledSectionWrapper>
+                <StyledSectionContent>
+                    <h2>At 360 we cover all angles.</h2>
+                </StyledSectionContent>
+            </StyledSectionWrapper>
             <Contact />
+            <Banner />
             <Services />
             <StyledSectionWrapper ref={ref}>
                 <StyledSectionContent
