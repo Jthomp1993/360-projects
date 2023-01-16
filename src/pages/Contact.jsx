@@ -232,7 +232,7 @@ const Contact = () => {
                         <div className="contact__item">
                             <p className="details">Louis</p>
                             <p className="details">info@360installs.co.uk</p>
-                            <p className="details">+44 7795577101</p>
+                            <p className="details">+44 7789881603</p>
                         </div>
                     </StyledContactContent>
                     <StyledContactContent>
