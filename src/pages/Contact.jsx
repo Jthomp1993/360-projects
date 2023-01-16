@@ -66,6 +66,11 @@ const StyledContactContent = styled.div`
         }
         p.details {
             font-size: calc(16px + 5 * ((100vw - 320px) / 680));
+            margin: 5px;
+        }
+
+        .contact__item {
+            margin-bottom: 2rem;
         }
     }
 `
@@ -219,9 +224,16 @@ const Contact = () => {
                 <StyledContentWrapper>
                     <StyledContactContent>
                         <h3>CONTACT DETAILS</h3>
-                        <p className="details">James Keller Aherne</p>
-                        <p className="details">info@360installs.co.uk</p>
-                        <p className="details">+44 7795577101</p>
+                        <div className="contact__item">
+                            <p className="details">James</p>
+                            <p className="details">info@360installs.co.uk</p>
+                            <p className="details">+44 7795577101</p>
+                        </div>
+                        <div className="contact__item">
+                            <p className="details">Louis</p>
+                            <p className="details">info@360installs.co.uk</p>
+                            <p className="details">+44 7795577101</p>
+                        </div>
                     </StyledContactContent>
                     <StyledContactContent>
                         <h3>SAY HELLO</h3>

@@ -15,7 +15,7 @@ const StyledHeaderContent = styled.div`
 
     h1 {
         margin-top: 7.5rem;
-        font-family: 'maison__light';
+        font-family: 'maison__medium';
         width: 75%;
         line-height: 1.25;
     } 

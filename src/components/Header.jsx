@@ -1,7 +1,5 @@
-import { useContext } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styled from 'styled-components/macro';
-import MainContext from '../context/MainContext';
 import img from '../images/services__background.jpg';
 
 const StyledServicesWrapper = styled.section`
@@ -50,8 +48,6 @@ const StyledContent = styled(motion.div)`
 `
 
 const Header = () => {
-    const { activeButton, setActiveButton } = useContext(MainContext);
-    const animation = useAnimation();
     
     return (
         <StyledServicesWrapper>
