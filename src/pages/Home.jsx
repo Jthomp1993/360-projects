@@ -3,7 +3,6 @@ import { useLocation, Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components/macro';
-import HomeHeader from '../components/HomeHeader';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
@@ -23,8 +22,8 @@ const StyledSectionContent = styled(motion.div)`
     text-align: center;
 
     h2 {
-        margin-top: 0;
-        padding-
+        margin: 0;
+        
     }
 
 
